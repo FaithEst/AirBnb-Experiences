@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- navbar ----- */
+.navbar{
+    height: 90px;
+    box-shadow: 0 2px 9px rgb(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+.airbnb--logo{
+    max-width: 120px;
+    margin-left: 36px;
+}
+
+/* ----- Hero section ------ */
+.hero{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.hero--photo{
+    max-width: 70%;
+    align-self: center;
+}
+.hero--title{
+    font-size: 55px;
+}
+.hero--description{
+    max-width: 30%;
+    font-size: 22px;
+    font-weight: lighter;
+}
