@@ -6,6 +6,9 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+section{
+    padding: 20px 30px;
+}
 
 /* ----- navbar ----- */
 .navbar{
@@ -21,7 +24,6 @@ body{
 
 /* ----- Hero section ------ */
 .hero{
-    padding: 20px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -36,4 +38,92 @@ body{
     max-width: 30%;
     font-size: 22px;
     font-weight: lighter;
+}
+
+/* ------ card section ------- */
+.card{
+    width: fit-content;
+    width: 276px;
+}
+.card--image{
+    background-image: url(../images/katie.png);
+    background-size: cover;
+    width: 100%;
+    height: 335px;
+    border-radius: 9px;
+    position: relative;
+}
+.card--update{
+    background-color: white;
+    padding: 5px 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.star--rates{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.star--icon{
+    width: 14px;
+    height: 14px;
+    border-radius: 0.5px;
+    margin-right: 6px;
+}
+.star--desc{
+    color: #918E9B;
+}
+.card--desc, .card--price{
+    color: #222222;
+    font-weight: lighter;
+}
+
+/* -----contact section------ */
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.contact-card > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.contact-card > h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-group > img {
+    height: 11px;
+    margin-right: 8px;
+}
+
+.info-group > p {
+    margin-block: 3px;
+    font-size: 12px;
+    color: #2B283A;
 }
