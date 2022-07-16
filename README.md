@@ -1,3 +1,3 @@
-# Airbnb React Project
+# Build an AirBnb Experiences clone with react
 
 ### Author: Faith Mutitu
