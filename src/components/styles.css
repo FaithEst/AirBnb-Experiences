@@ -67,6 +67,7 @@ section{
 }
 .card--update{
     background-color: white;
+    font-size: 12px;
     padding: 5px 6px;
     position: absolute;
     top: 10px;
