@@ -1,7 +1,5 @@
 import React from "react";
 import './styles.css';
-import mailIcon from '../images/mail-icon.png';
-import phoneIcon from '../images/phone-icon.png';
 
 function Contact(props){
     return(
@@ -9,11 +7,11 @@ function Contact(props){
             <img src={props.img}/>
             <h3>{props.name}</h3>
             <div className="info-group">
-                <img src={phoneIcon} />
+                <img src={process.env.PUBLIC_URL + "images/phoneIcon"} />
                 <p>{props.phone}</p>
             </div>
             <div className="info-group">
-                <img src={mailIcon} />
+                <img src={process.env.PUBLIC_URL + "images/mailIcon"} />
                 <p>{props.email}</p>
             </div>
         </div>

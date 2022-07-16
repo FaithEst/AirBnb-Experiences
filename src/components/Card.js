@@ -1,20 +1,28 @@
 import React from "react";
 import './styles.css';
-import starIcon from '../images/star.png';
 
-function Card(){
+function Card(props){
+    let badgeText;
+    if(props.item.openSpots === 0){
+        badgeText = "SOLD OUT"
+    } else if(props.item.location === "Online"){
+        badgeText = "ONLINE"
+    }
     return(
         <section className="cards--section">
             <div className="card">
                 <div className="card--image">
-                    <span className="card--update">SOLD OUT</span>
+                    <img src={props.item.coverImg}/>
+                    {badgeText && <span className="card--update">{badgeText}</span>}
                 </div>
                 <div className="star--rates">
-                <img className="star--icon" src={starIcon}/>
-                <p className="star--text">5.0 <span className="star--desc">(6).USA</span> </p>
-            </div>
-            <p className="card--desc">Life lessons with Katie Zaferes</p>
-            <p className="card--price"><strong>From $136</strong> / person</p>
+                    <img className="star--icon" src={process.env.PUBLIC_URL+"images/star.png"}/>
+                    <span className="star--text">{props.item.stats.rating} </span>
+                    <span className="star--desc">({props.item.stats.reviewCount})</span> 
+                    <span className="star--desc">•{props.item.location}</span>
+                </div>
+            <p className="card--desc">{props.item.title}</p>
+            <p className="card--price"><strong>From ${props.item.price}</strong> / person</p>
             </div>
         </section>
     );

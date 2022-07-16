@@ -1,42 +1,28 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-import Contact from "./components/Contact";
 import './components/styles.css';
-import whiskerson from './images/mr-whiskerson.png';
-import felix from './images/felix.png';
-import fluffykins from './images/fluffykins.png';
-import pumpkin from './images/pumpkin.png';
+import data from "./data";
 
 function App() {
+  const cardData = data.map(card => {
+    return(
+      <Card 
+      key={card.id}
+      item={card}
+    />
+    );
+  });
   return (
-    <div className="contacts">
-      <Contact  
-        img={whiskerson}
-        name="Mr. Whiskerson"
-        phone="(212) 555-1234"
-        email="mr.whiskaz@catnap.meow"
-      />
-      <Contact 
-        img={felix}
-        name="Felix"
-        phone="(212) 555-4567"
-        email="thecat@hotmail.com"
-      />
-      <Contact 
-        img={fluffykins}
-        name="Fluffykins"
-        phone="(212) 555-2345"
-        email="fluff@me.com"
-      />
-      <Contact 
-        img={pumpkin}
-        name="Pumpkin"
-        phone="(0800) CAT KING"
-        email="pumpkin@scrimba.com"
-      />
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <section className="card--list">
+        {cardData}
+      </section>
+    </>   
   );
 }
+
 
 export default App;
