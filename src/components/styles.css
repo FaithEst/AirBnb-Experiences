@@ -32,7 +32,7 @@ section{
     align-self: center;
 }
 .hero--title{
-   
+   font-size: 36px;
 }
 .hero--description{
     max-width: 30%;
@@ -48,7 +48,7 @@ section{
 }
 .card{
     width: fit-content;
-    width: 176px;
+    width: 216px;
     flex: 0 0 auto;         /* ADD */
     display: flex;          /* ADD */
     flex-direction: column; /* ADD */
@@ -56,7 +56,7 @@ section{
 .card--image{
     background-size: cover;
     width: 100%;
-    height: 235px;
+    height: 275px;
     position: relative;
 }
 .card--image > img{
@@ -89,6 +89,9 @@ section{
 .card--desc, .card--price{
     color: #222222;
     font-weight: lighter;
+}
+.card--desc{
+    margin-bottom: 5px;
 }
 
 /* -----contact section------ */
