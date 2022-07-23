@@ -18,11 +18,12 @@ function Jokes(props){
         console.log(isShown)
     }
 
+    const mode = isShown ? "Hide Punchline" : "Show Punchline";
     return(
         <div className="joke">
             {props.setup && <h3 className="joke-setup">Setup: {props.setup}</h3>}  
             {isShown && <p>Punchline: {props.punchline}</p>}
-            <button className="joke--button" onClick={toggle}>Show punchline</button>
+            <button className="joke--button" onClick={toggle}>{mode}</button>
             <hr></hr>
         </div>
     );
